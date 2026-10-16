@@ -11,11 +11,17 @@ node_modules
 dist
 dist-ssr
 *.local
+*.zip
 
 # Environment variables
 .env
 .env.*
 !.env.example
+
+# SQLite temporary journals
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
 
 # Editor directories and files
 .vscode/*

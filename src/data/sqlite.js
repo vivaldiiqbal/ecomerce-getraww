@@ -1,4 +1,3 @@
-import Database from 'better-sqlite3';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
@@ -13,6 +12,20 @@ const DB_DIR = __dirname;
 const DB_PATH = process.env.SQLITE_DB_PATH || path.join(DB_DIR, 'getraw.sqlite');
 const LEGACY_JSON_PATH = path.join(DB_DIR, 'db.json');
 
+// Resolusi Driver SQLite: Utamakan node:sqlite (bawaan Node 22+, 0 compiler/0 gyp), fallback ke better-sqlite3
+let DatabaseClass = null;
+try {
+  const mod = await import('node:sqlite');
+  DatabaseClass = mod.DatabaseSync;
+} catch {
+  try {
+    const mod = await import('better-sqlite3');
+    DatabaseClass = mod.default;
+  } catch {
+    DatabaseClass = null;
+  }
+}
+
 let dbInstance = null;
 
 export class SQLiteDatabase {
@@ -20,16 +33,24 @@ export class SQLiteDatabase {
    * Mendapatkan koneksi singleton SQLite dengan mode WAL (Write-Ahead Logging)
    */
   static getDB() {
+    if (!DatabaseClass) {
+      throw new Error('Driver SQLite tidak ditemukan. Pastikan Node.js versi 22+ digunakan.');
+    }
+
     if (!dbInstance) {
       if (!fs.existsSync(DB_DIR)) {
         fs.mkdirSync(DB_DIR, { recursive: true });
       }
 
-      dbInstance = new Database(DB_PATH);
-      // Optimasi performa dan concurrency SQLite
-      dbInstance.pragma('journal_mode = WAL');
-      dbInstance.pragma('synchronous = NORMAL');
-      dbInstance.pragma('foreign_keys = ON');
+      dbInstance = new DatabaseClass(DB_PATH);
+      // Optimasi performa dan concurrency SQLite standar
+      try {
+        dbInstance.exec('PRAGMA journal_mode = WAL;');
+        dbInstance.exec('PRAGMA synchronous = NORMAL;');
+        dbInstance.exec('PRAGMA foreign_keys = ON;');
+      } catch (pragmaErr) {
+        // Fallback jika mode pragma tidak diizinkan
+      }
 
       this.initSchema();
     }
@@ -107,10 +128,15 @@ export class SQLiteDatabase {
    * Inisialisasi awal & migrasi data otomatis dari db.json / productsSeed ke SQLite
    */
   static initAndMigrate() {
+    if (!DatabaseClass) return;
+
     const db = this.getDB();
 
-    const productCount = db.prepare('SELECT COUNT(*) AS count FROM products').get().count;
-    const userCount = db.prepare('SELECT COUNT(*) AS count FROM users').get().count;
+    const productCountRow = db.prepare('SELECT COUNT(*) AS count FROM products').get();
+    const productCount = productCountRow ? productCountRow.count : 0;
+
+    const userCountRow = db.prepare('SELECT COUNT(*) AS count FROM users').get();
+    const userCount = userCountRow ? userCountRow.count : 0;
 
     // Migrasi jika tabel produk atau user masih kosong
     if (productCount === 0 || userCount === 0) {
@@ -149,7 +175,7 @@ export class SQLiteDatabase {
 
       // Pastikan Admin default ada
       const adminEmail = 'admin@getraw.com';
-      const hasAdmin = initialUsers.some(u => u.email.toLowerCase() === adminEmail);
+      const hasAdmin = initialUsers.some(u => u.email && u.email.toLowerCase() === adminEmail);
       if (!hasAdmin) {
         initialUsers.push({
           id: 'usr_admin_001',
@@ -196,7 +222,9 @@ export class SQLiteDatabase {
         INSERT OR REPLACE INTO settings (key, value) VALUES (?, ?)
       `);
 
-      const migrateTx = db.transaction(() => {
+      try {
+        db.exec('BEGIN TRANSACTION;');
+
         if (productCount === 0) {
           for (const p of initialProducts) {
             insertProduct.run(
@@ -263,10 +291,13 @@ export class SQLiteDatabase {
         for (const [key, val] of Object.entries(initialSettings)) {
           insertSetting.run(key, typeof val === 'object' ? JSON.stringify(val) : String(val));
         }
-      });
 
-      migrateTx();
-      console.log(`✅ SQLiteDatabase: Migrasi selesai. Database tersimpan di ${DB_PATH}`);
+        db.exec('COMMIT;');
+        console.log(`✅ SQLiteDatabase: Migrasi selesai. Database tersimpan di ${DB_PATH}`);
+      } catch (txErr) {
+        db.exec('ROLLBACK;');
+        console.error('❌ Gagal menjalankan migrasi transaksi SQLite:', txErr.message);
+      }
     }
   }
 
@@ -369,6 +400,8 @@ export class SQLiteDatabase {
    * Sinkronisasi seluruh data ke SQLite dalam satu transaksi ACID
    */
   static syncAll({ products, users, orders, settings }) {
+    if (!DatabaseClass) return;
+
     const db = this.getDB();
 
     const insertProduct = db.prepare(`
@@ -402,8 +435,8 @@ export class SQLiteDatabase {
       INSERT OR REPLACE INTO settings (key, value) VALUES (?, ?)
     `);
 
-    const syncTx = db.transaction(() => {
-      // Hapus & replace untuk memastikan sinkronisasi akurat
+    try {
+      db.exec('BEGIN TRANSACTION;');
       db.exec('DELETE FROM products; DELETE FROM users; DELETE FROM orders; DELETE FROM settings;');
 
       if (Array.isArray(products)) {
@@ -476,8 +509,11 @@ export class SQLiteDatabase {
           insertSetting.run(key, typeof val === 'object' ? JSON.stringify(val) : String(val));
         }
       }
-    });
 
-    syncTx();
+      db.exec('COMMIT;');
+    } catch (err) {
+      try { db.exec('ROLLBACK;'); } catch (_) {}
+      console.error('❌ SQLiteDatabase: Gagal sinkronisasi transaksi:', err.message);
+    }
   }
 }

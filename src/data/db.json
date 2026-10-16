@@ -1,119 +1,117 @@
 {
   "products": [
     {
-      "id": "873251",
-      "title": "Tshirt Marzia White GETRAW",
-      "slug": "tshirt-marzia-white-getraw",
-      "category": "Tees",
-      "originalPrice": 200000,
-      "discountPercentage": 50,
-      "finalPrice": 99000,
-      "discount": "50%",
-      "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
-      "hoverImage": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
+      "id": "873259",
+      "title": "Cargo Skate Pants Baggy Black",
+      "slug": "cargo-skate-pants-baggy-black",
+      "category": "Pants",
+      "originalPrice": 420000,
+      "discountPercentage": 30,
+      "finalPrice": 289000,
+      "discount": "30%",
+      "image": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=800&q=80",
+      "hoverImage": "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=800&q=80",
       "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
+        "30",
+        "32",
+        "34",
+        "36"
       ],
       "stockPerSize": {
-        "S": 5,
-        "M": 4,
-        "L": 3,
-        "XL": 2
+        "30": 3,
+        "32": 3,
+        "34": 2,
+        "36": 2
       },
       "inStock": true,
-      "description": "Graphic T-Shirt berbahan katun 24s combed premium dengan cetakan sablon plastisol tahan lama. Fit oversized boxy khas streetwear.",
-      "fabric": "100% Premium Combed Cotton 24s",
+      "description": "Celana cargo baggy berpotongan longgar khas skater. Dilengkapi 6 kantong fungsional dengan bahan twill ripstop.",
+      "fabric": "Heavyweight Cotton Twill Ripstop",
       "isNew": false,
-      "createdAt": "2026-10-16T16:19:00.300Z",
-      "updatedAt": null
-    },
-    {
-      "id": "873252",
-      "title": "Tshirt Arcadia White GETRAW",
-      "slug": "tshirt-arcadia-white-getraw",
-      "category": "Tees",
-      "originalPrice": 200000,
-      "discountPercentage": 0,
-      "finalPrice": 200000,
-      "discount": null,
-      "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
-      "hoverImage": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
-      "sizes": [
-        "M",
-        "L",
-        "XL"
-      ],
-      "stockPerSize": {
-        "M": 3,
-        "L": 3,
-        "XL": 2
-      },
-      "inStock": true,
-      "description": "Koleksi terbaru Pure Soul Apparel dengan tipografi khas streetwear underground. Terbuat dari katun tebal tidak menerawang.",
-      "fabric": "100% Cotton Heavyweight 20s",
-      "isNew": true,
       "createdAt": "2026-10-16T16:19:00.306Z",
       "updatedAt": null
     },
     {
-      "id": "873253",
-      "title": "Tshirt Hawkie Black GETRAW",
-      "slug": "tshirt-hawkie-black-getraw",
-      "category": "Tees",
-      "originalPrice": 200000,
-      "discountPercentage": 50,
-      "finalPrice": 99000,
-      "discount": "50%",
-      "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
-      "hoverImage": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=800&q=80",
+      "id": "873258",
+      "title": "Heavyweight Hoodie Black Pure Soul",
+      "slug": "heavyweight-hoodie-black-pure-soul",
+      "category": "Outerwear",
+      "originalPrice": 550000,
+      "discountPercentage": 35,
+      "finalPrice": 360000,
+      "discount": "35%",
+      "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80",
+      "hoverImage": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
       "sizes": [
-        "S",
         "M",
         "L",
-        "XL",
-        "30"
+        "XL"
       ],
       "stockPerSize": {
-        "30": 1,
-        "S": 2,
         "M": 2,
         "L": 1,
         "XL": 1
       },
       "inStock": true,
-      "description": "Hitam pekat dengan grafis vintage distro pilihan. Nyaman dipakai seharian dengan potongan dropped-shoulder.",
-      "fabric": "100% Heavyweight Cotton 24s",
-      "isNew": false,
+      "description": "Hoodie tebal gramasi 380gsm Fleece Cotton. Dilengkapi kantong kanguru besar dan bordir halus logo Pure Soul.",
+      "fabric": "Heavyweight Cotton Fleece 380 GSM",
+      "isNew": true,
       "createdAt": "2026-10-16T16:19:00.306Z",
       "updatedAt": null
     },
     {
-      "id": "873254",
-      "title": "Tshirt Edelina Black GETRAW",
-      "slug": "tshirt-edelina-black-getraw",
+      "id": "873257",
+      "title": "Shirt Breton Striped Oversize GETRAW",
+      "slug": "shirt-breton-striped-oversize-getraw",
+      "category": "Shirts",
+      "originalPrice": 350000,
+      "discountPercentage": 30,
+      "finalPrice": 249000,
+      "discount": "30%",
+      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
+      "hoverImage": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stockPerSize": {
+        "M": 2,
+        "L": 2,
+        "XL": 2
+      },
+      "inStock": true,
+      "description": "Kemeja berlengan pendek dengan motif garis Breton klasik berpotongan oversized dengan saku THXNSMN®.",
+      "fabric": "Premium Yarn-Dyed Cotton Blend",
+      "isNew": true,
+      "createdAt": "2026-10-16T16:19:00.306Z",
+      "updatedAt": null
+    },
+    {
+      "id": "873256",
+      "title": "Tshirt Concertina White GETRAW",
+      "slug": "tshirt-concertina-white-getraw",
       "category": "Tees",
       "originalPrice": 200000,
       "discountPercentage": 50,
       "finalPrice": 99000,
       "discount": "50%",
-      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=800&q=80",
-      "hoverImage": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
+      "hoverImage": "https://images.unsplash.com/photo-1527719327859-c6ce80353573?auto=format&fit=crop&w=800&q=80",
       "sizes": [
         "S",
         "M",
-        "L"
+        "L",
+        "XL"
       ],
       "stockPerSize": {
-        "S": 4,
-        "M": 5,
-        "L": 3
+        "S": 1,
+        "M": 1,
+        "L": 1,
+        "XL": 0
       },
       "inStock": true,
-      "description": "Desain streetwear monokromatik serbaguna. Padukan dengan cargo pants untuk style urban skateboarding.",
-      "fabric": "100% Cotton 24s Soft Touch",
+      "description": "Koleksi terbatas edisi musik & konser. Menggunakan high-density discharge print yang lembut disentuh.",
+      "fabric": "100% Ring Spun Cotton",
       "isNew": false,
       "createdAt": "2026-10-16T16:19:00.306Z",
       "updatedAt": null
@@ -151,16 +149,104 @@
       "updatedAt": null
     },
     {
-      "id": "873256",
-      "title": "Tshirt Concertina White GETRAW",
-      "slug": "tshirt-concertina-white-getraw",
+      "id": "873254",
+      "title": "Tshirt Edelina Black GETRAW",
+      "slug": "tshirt-edelina-black-getraw",
       "category": "Tees",
       "originalPrice": 200000,
       "discountPercentage": 50,
       "finalPrice": 99000,
       "discount": "50%",
-      "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
-      "hoverImage": "https://images.unsplash.com/photo-1527719327859-c6ce80353573?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=800&q=80",
+      "hoverImage": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stockPerSize": {
+        "S": 4,
+        "M": 5,
+        "L": 3
+      },
+      "inStock": true,
+      "description": "Desain streetwear monokromatik serbaguna. Padukan dengan cargo pants untuk style urban skateboarding.",
+      "fabric": "100% Cotton 24s Soft Touch",
+      "isNew": false,
+      "createdAt": "2026-10-16T16:19:00.306Z",
+      "updatedAt": null
+    },
+    {
+      "id": "873253",
+      "title": "Tshirt Hawkie Black GETRAW",
+      "slug": "tshirt-hawkie-black-getraw",
+      "category": "Tees",
+      "originalPrice": 200000,
+      "discountPercentage": 50,
+      "finalPrice": 99000,
+      "discount": "50%",
+      "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+      "hoverImage": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=800&q=80",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "30"
+      ],
+      "stockPerSize": {
+        "30": 1,
+        "S": 2,
+        "M": 2,
+        "L": 1,
+        "XL": 1
+      },
+      "inStock": true,
+      "description": "Hitam pekat dengan grafis vintage distro pilihan. Nyaman dipakai seharian dengan potongan dropped-shoulder.",
+      "fabric": "100% Heavyweight Cotton 24s",
+      "isNew": false,
+      "createdAt": "2026-10-16T16:19:00.306Z",
+      "updatedAt": null
+    },
+    {
+      "id": "873252",
+      "title": "Tshirt Arcadia White GETRAW",
+      "slug": "tshirt-arcadia-white-getraw",
+      "category": "Tees",
+      "originalPrice": 200000,
+      "discountPercentage": 0,
+      "finalPrice": 200000,
+      "discount": null,
+      "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
+      "hoverImage": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stockPerSize": {
+        "M": 3,
+        "L": 3,
+        "XL": 2
+      },
+      "inStock": true,
+      "description": "Koleksi terbaru Pure Soul Apparel dengan tipografi khas streetwear underground. Terbuat dari katun tebal tidak menerawang.",
+      "fabric": "100% Cotton Heavyweight 20s",
+      "isNew": true,
+      "createdAt": "2026-10-16T16:19:00.306Z",
+      "updatedAt": null
+    },
+    {
+      "id": "873251",
+      "title": "Tshirt Marzia White GETRAW",
+      "slug": "tshirt-marzia-white-getraw",
+      "category": "Tees",
+      "originalPrice": 200000,
+      "discountPercentage": 50,
+      "finalPrice": 99000,
+      "discount": "50%",
+      "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+      "hoverImage": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
       "sizes": [
         "S",
         "M",
@@ -168,102 +254,16 @@
         "XL"
       ],
       "stockPerSize": {
-        "S": 1,
-        "M": 1,
-        "L": 1,
-        "XL": 0
-      },
-      "inStock": true,
-      "description": "Koleksi terbatas edisi musik & konser. Menggunakan high-density discharge print yang lembut disentuh.",
-      "fabric": "100% Ring Spun Cotton",
-      "isNew": false,
-      "createdAt": "2026-10-16T16:19:00.306Z",
-      "updatedAt": null
-    },
-    {
-      "id": "873257",
-      "title": "Shirt Breton Striped Oversize GETRAW",
-      "slug": "shirt-breton-striped-oversize-getraw",
-      "category": "Shirts",
-      "originalPrice": 350000,
-      "discountPercentage": 30,
-      "finalPrice": 249000,
-      "discount": "30%",
-      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
-      "hoverImage": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
-      "sizes": [
-        "M",
-        "L",
-        "XL"
-      ],
-      "stockPerSize": {
-        "M": 2,
-        "L": 2,
+        "S": 5,
+        "M": 4,
+        "L": 3,
         "XL": 2
       },
       "inStock": true,
-      "description": "Kemeja berlengan pendek dengan motif garis Breton klasik berpotongan oversized dengan saku THXNSMN®.",
-      "fabric": "Premium Yarn-Dyed Cotton Blend",
-      "isNew": true,
-      "createdAt": "2026-10-16T16:19:00.306Z",
-      "updatedAt": null
-    },
-    {
-      "id": "873258",
-      "title": "Heavyweight Hoodie Black Pure Soul",
-      "slug": "heavyweight-hoodie-black-pure-soul",
-      "category": "Outerwear",
-      "originalPrice": 550000,
-      "discountPercentage": 35,
-      "finalPrice": 360000,
-      "discount": "35%",
-      "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80",
-      "hoverImage": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
-      "sizes": [
-        "M",
-        "L",
-        "XL"
-      ],
-      "stockPerSize": {
-        "M": 2,
-        "L": 1,
-        "XL": 1
-      },
-      "inStock": true,
-      "description": "Hoodie tebal gramasi 380gsm Fleece Cotton. Dilengkapi kantong kanguru besar dan bordir halus logo Pure Soul.",
-      "fabric": "Heavyweight Cotton Fleece 380 GSM",
-      "isNew": true,
-      "createdAt": "2026-10-16T16:19:00.306Z",
-      "updatedAt": null
-    },
-    {
-      "id": "873259",
-      "title": "Cargo Skate Pants Baggy Black",
-      "slug": "cargo-skate-pants-baggy-black",
-      "category": "Pants",
-      "originalPrice": 420000,
-      "discountPercentage": 30,
-      "finalPrice": 289000,
-      "discount": "30%",
-      "image": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=800&q=80",
-      "hoverImage": "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=800&q=80",
-      "sizes": [
-        "30",
-        "32",
-        "34",
-        "36"
-      ],
-      "stockPerSize": {
-        "30": 3,
-        "32": 3,
-        "34": 2,
-        "36": 2
-      },
-      "inStock": true,
-      "description": "Celana cargo baggy berpotongan longgar khas skater. Dilengkapi 6 kantong fungsional dengan bahan twill ripstop.",
-      "fabric": "Heavyweight Cotton Twill Ripstop",
+      "description": "Graphic T-Shirt berbahan katun 24s combed premium dengan cetakan sablon plastisol tahan lama. Fit oversized boxy khas streetwear.",
+      "fabric": "100% Premium Combed Cotton 24s",
       "isNew": false,
-      "createdAt": "2026-10-16T16:19:00.306Z",
+      "createdAt": "2026-10-16T16:19:00.300Z",
       "updatedAt": null
     }
   ],
@@ -278,45 +278,56 @@
       "memberStatus": "System Administrator",
       "joinedDate": "Oktober 2026",
       "createdAt": "2026-10-08T15:54:00.733Z"
+    },
+    {
+      "id": "usr_1792167839949_121",
+      "name": "Ilham",
+      "email": "ilham@gmail.com",
+      "phone": "081212121212121",
+      "passwordHash": "$2b$10$YkMUnKIVHvBEiypyuFRanu7oqIxL.Uitc6uXM2OHB9yhVQHxAE..C",
+      "role": "user",
+      "memberStatus": "GETRAW® Gold Member",
+      "joinedDate": "Oktober 2026",
+      "createdAt": "2026-10-16T16:23:59.990Z"
     }
   ],
   "orders": [
     {
-      "orderNumber": "#THX-20261011-629",
-      "date": "11 Okt 2026, 14.26",
+      "orderNumber": "#THX-20261011-158",
+      "date": "11 Okt 2026, 15.20",
       "customer": {
-        "name": "Arya Pratama",
-        "email": "arya@gmail.com",
-        "phone": "081289341029",
-        "address": "Kemang Raya No 45"
+        "name": "Siti Rahma",
+        "email": "siti@test.com",
+        "phone": "081399887766",
+        "address": "Bandung"
       },
       "items": [
         {
-          "id": "873251",
-          "title": "Tshirt Marzia White GETRAW",
-          "slug": "tshirt-marzia-white-getraw",
-          "size": "S",
+          "id": "873252",
+          "title": "Tshirt Arcadia White GETRAW",
+          "slug": "tshirt-arcadia-white-getraw",
+          "size": "M",
           "quantity": 1,
           "originalPrice": 200000,
-          "finalPrice": 99000,
-          "discountPercentage": 50,
-          "itemTotal": 99000,
-          "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80"
+          "finalPrice": 200000,
+          "discountPercentage": 0,
+          "itemTotal": 200000,
+          "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80"
         }
       ],
       "subtotalOriginal": 200000,
-      "subtotalFinal": 99000,
+      "subtotalFinal": 200000,
       "discount": 0,
       "shippingCost": 12000,
-      "grandTotal": 111000,
-      "paymentMethod": "QRIS INSTANT",
+      "grandTotal": 212000,
+      "paymentMethod": "QRIS",
       "paymentStatus": "QRIS INSTANT LUNAS",
       "orderStatus": "CANCELLED",
       "trackingNumber": "",
-      "paidAt": "11 Okt 2026, 14.26",
+      "paidAt": "11 Okt 2026, 15.20",
       "qrCodeData": "00020101021126620014ID.LINKAJA.WWW01189360091438921020215202610085802ID5910GETRAW® KIOSK6007JAKARTA61051211062070703A0163045E1A",
       "virtualAccountNo": "8820938472910384",
-      "createdAt": "2026-10-11T07:26:07.567Z"
+      "createdAt": "2026-10-11T08:20:43.327Z"
     },
     {
       "orderNumber": "#THX-20261011-758",
@@ -356,41 +367,41 @@
       "createdAt": "2026-10-11T07:43:40.508Z"
     },
     {
-      "orderNumber": "#THX-20261011-158",
-      "date": "11 Okt 2026, 15.20",
+      "orderNumber": "#THX-20261011-629",
+      "date": "11 Okt 2026, 14.26",
       "customer": {
-        "name": "Siti Rahma",
-        "email": "siti@test.com",
-        "phone": "081399887766",
-        "address": "Bandung"
+        "name": "Arya Pratama",
+        "email": "arya@gmail.com",
+        "phone": "081289341029",
+        "address": "Kemang Raya No 45"
       },
       "items": [
         {
-          "id": "873252",
-          "title": "Tshirt Arcadia White GETRAW",
-          "slug": "tshirt-arcadia-white-getraw",
-          "size": "M",
+          "id": "873251",
+          "title": "Tshirt Marzia White GETRAW",
+          "slug": "tshirt-marzia-white-getraw",
+          "size": "S",
           "quantity": 1,
           "originalPrice": 200000,
-          "finalPrice": 200000,
-          "discountPercentage": 0,
-          "itemTotal": 200000,
-          "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80"
+          "finalPrice": 99000,
+          "discountPercentage": 50,
+          "itemTotal": 99000,
+          "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80"
         }
       ],
       "subtotalOriginal": 200000,
-      "subtotalFinal": 200000,
+      "subtotalFinal": 99000,
       "discount": 0,
       "shippingCost": 12000,
-      "grandTotal": 212000,
-      "paymentMethod": "QRIS",
+      "grandTotal": 111000,
+      "paymentMethod": "QRIS INSTANT",
       "paymentStatus": "QRIS INSTANT LUNAS",
       "orderStatus": "CANCELLED",
       "trackingNumber": "",
-      "paidAt": "11 Okt 2026, 15.20",
+      "paidAt": "11 Okt 2026, 14.26",
       "qrCodeData": "00020101021126620014ID.LINKAJA.WWW01189360091438921020215202610085802ID5910GETRAW® KIOSK6007JAKARTA61051211062070703A0163045E1A",
       "virtualAccountNo": "8820938472910384",
-      "createdAt": "2026-10-11T08:20:43.327Z"
+      "createdAt": "2026-10-11T07:26:07.567Z"
     }
   ],
   "settings": {

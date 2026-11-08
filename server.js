@@ -88,17 +88,26 @@ app.get('/api/v1/health', (req, res) => {
 // 7. Mount Main API Router (/api/v1)
 app.use('/api/v1', apiRouter);
 
-// 8. Serve Production Built Frontend if dist exists
+// 8. Serve Production Built Frontend (Mendukung folder dist maupun root direktori)
 const distPath = path.join(process.cwd(), 'dist');
+const rootIndexPath = path.join(process.cwd(), 'index.html');
+
 if (fs.existsSync(distPath)) {
   app.use(express.static(distPath));
-  app.use((req, res, next) => {
-    if (req.method === 'GET' && !req.path.startsWith('/api') && !req.path.startsWith('/uploads')) {
+}
+app.use(express.static(process.cwd()));
+
+app.use((req, res, next) => {
+  if (req.method === 'GET' && !req.path.startsWith('/api') && !req.path.startsWith('/uploads')) {
+    if (fs.existsSync(path.join(distPath, 'index.html'))) {
       return res.sendFile(path.join(distPath, 'index.html'));
     }
-    next();
-  });
-}
+    if (fs.existsSync(rootIndexPath)) {
+      return res.sendFile(rootIndexPath);
+    }
+  }
+  next();
+});
 
 // 9. 404 Route Not Found Handler (For unmatched /api or static routes)
 app.use(notFoundHandler);

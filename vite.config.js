@@ -30,7 +30,7 @@ const autoBackendPlugin = () => {
 };
 
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [react(), tailwindcss(), autoBackendPlugin()],
   server: {
     port: 5173,

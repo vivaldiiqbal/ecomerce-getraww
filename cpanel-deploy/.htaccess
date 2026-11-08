@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Jika file atau direktori fisik ada (seperti file js, css, gambar, uploads), sajikan langsung
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Routing SPA: Arahkan semua URL lainnya ke index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Header CORS untuk asset statis dan font
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+</IfModule>
